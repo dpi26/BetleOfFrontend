@@ -1,114 +1,321 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>Emergent | Fullstack App</title>
-        <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calendarjs/ce/dist/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@calendarjs/ce/dist/style.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+</head>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
-                api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
-                session_recording: {
-                    recordCrossOriginIframes: true,
-                    capturePerformance: false,
-                },
-            });
-        </script>
-    </body>
+<body>
+
+  <!-- <div class="card" style="width: 18rem;"> -->
+  <!-- <img src="./assests/image/hero-img (1).png" class="card-img-top" alt="..."> -->
+  <!-- <div class="card-body"> -->
+  <!-- <h5 class="card-title">Card title</h5> -->
+  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p> -->
+  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!--  -->
+  <!-- <div class="modal" tabindex="-1"> -->
+  <!-- <div class="modal-dialog"> -->
+  <!-- <div class="modal-content"> -->
+  <!-- <div class="modal-header"> -->
+  <!-- <h5 class="modal-title">Modal title</h5> -->
+  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+  <!-- </div> -->
+  <!-- <div class="modal-body"> -->
+  <!-- <p>Modal body text goes here.</p> -->
+  <!-- </div> -->
+  <!-- <div class="modal-footer"> -->
+  <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- <button type="button" class="btn btn-secondary" -->
+  <!-- data-bs-toggle="tooltip" data-bs-placement="top" -->
+  <!-- data-bs-custom-class="custom-tooltip" -->
+  <!-- data-bs-title="This top tooltip is themed via CSS variables."> -->
+  <!-- Custom tooltip -->
+  <!-- </button> -->
+  <!--  -->
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-light px-4 py-5">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand" href="#"><img
+          src="https://websitedemos.net/wellness-coach-02/wp-content/uploads/sites/1514/2025/02/header-logo.svg"
+          alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav  ms-auto d-flex gap-4 mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page">Services</a>
+          </li>
+        </ul>
+        <button type="button" class="btn-1 ms-5">CALL :(878)347848298</button>
+      </div>
+
+    </div>
+  </nav>
+
+  <main>
+    <!--Hero section-->
+
+    <section class="hero-img padding-section">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="hero-inner text-center">
+                <h6 class="text-white font-1 py-3 ">Calorie control, balanced nutrition</h6>
+                <h1 class="text-white font-1 py-3 ">Start living your <br> healthiest life</h1>
+                <button class="btn-2">Book an Appointment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Second section -->
+
+    <section class="second-section padding-section bg-light">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+
+              <div class="second-sec-left p-5">
+                <div id='root' class=" calendar  rounded-2 "></div>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+              <div class="second-sec-right p-5">
+                <h6 class="font-1 h6-style">Book an Appointment</h6>
+                <h2 class="font-1 h2-style">Wellness coaching<br>with Lumora</h2>
+                <p class="text-green">Achieve balance and well-being with personalized coaching tailored to your needs.
+                  Lumora guides you through sustainable lifestyle changes to help you reach your
+                  health and wellness goals. <br><br>Start your journey to a healthier life today.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--third Section -->
+
+    <section class="third-section padding-section ">
+      <div class="container-fluid">
+        <div class="container">
+          <h6 class="text-center font-1 h6-style  ">Coaching Services</h6>
+          <h2 class="text-center font-1 h2-style ">Create the life you want to live</h2>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card ">
+                <div class="card-img  ">
+                  <img src=".\assests\image\Personalized-nutrition-plans.jpg" class="img-fluid"  alt="">
+
+                  <div class="card-word p-5">
+                    <h4 class="font-1  h4-sty">Personalized nutrition plan</h4>
+                    <p class="p-sty">Create customized meal plans tailored to your individual health goals,
+                      needs lifestyle preferences to help you achieve
+                      optimal wellness. <br><strong> start from: $500</strong></p>
+
+                    <a href="#" class="btn-1 text-decoration-none">Book An Appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-img ">
+                  <img src=".\assests\image\Weight-management-counseling.jpg" class="img-fluid" alt="">
+                  <div class="card-word p-5">
+                    <h4 class="font-1  h4-sty">Weight management counseling</h4>
+                    <p class="p-sty">Through tailored nutrition plans, behavioral coaching, and fitness advice, we focus
+                      on
+                      sustainable results your overall well-being. <br> <strong>start from: $1,000</strong></p>
+                    <a href="#" class="btn-1 text-decoration-none">Book An Appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card  ">
+                <div class="card-img  ">
+                  <img src=".\assests\image\Health-and-wellness-coaching.jpg" height="400px" width="545px" alt="">
+
+                  <div class="card-word p-5">
+                    <h4 class="font-1  h4-sty">Health and wellness coaching</h4>
+                    <p class="p-sty">Offer one-on-one coaching sessions to help you adopt healthier eating patterns,
+                      improve your overall well-being <br>
+                      <strong> start from: $800</strong>
+                    </p>
+
+                    <a href="#" class="btn-1 text-decoration-none">Book An Appointment</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-img ">
+                  <img src=".\assests\image\Expand-your-spiritual-knowledge.jpg" height="400px" width="545px" alt="">
+                  <div class="card-word p-5">
+                    <h4 class="font-1  h4-sty">Expand your spiritual knowledge</h4>
+                    <p class="p-sty">Spiritual coaching will help you to walk confidently into your purpose and
+                      incorporate your spirituality into your day-to-day life. <br>
+                      <strong>start from: $1,500</strong>
+                    </p>
+                    <a href="#" class="btn-1 text-decoration-none">Book An Appointment</a>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+    </section>
+
+    <!--forth section -->
+    <section class="forth-section padding-section bg-light">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="forth-card ">
+                <div class="card-img">
+                  <img src=".\assests\image\Book-an-Appointment-Sec-IMG-400x533.jpg" class="rounded-3"  alt="">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="font-word p-5">
+                <h3 class="text-center font-1 h3-style py-3">Change your life <br> through professional <br> health
+                  coaching</h3>
+                <p class="p-sty py-3 px-2"> I help clients transform their health through personalized nutrition and
+                  sustainable habits. I’ve guided over 100 clients to better well-being by focusing on small, manageable
+                  changes that lead to lasting results.</p>
+                <a href="#" class="btn-1 text-decoration-none"> Book An Appointment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--Fifth section--->
+
+    <section class="fifth-section padding-section">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 ">
+              <div class="fifthcard  ">
+                <img
+                  src="https://websitedemos.net/wellness-coach-02/wp-content/uploads/sites/1514/2025/02/header-logo.svg"
+                 width="150px" alt="">
+                <p class="p-sty fs-6">Get news about our latest sale dates </p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="fifthcard px-5">
+                <h6 class="h6-style px-5">Company</h6>
+                <ul class=" btn3 navbar-nav  ms-auto mb-1 mb-lg-0 px-5">
+                  <li><a class="nav-link " aria-current="page" href="#">Home</a></li>
+                  <li> <a class="nav-link " aria-current="page" href="#"> About</a></li>
+                  <li> <a class="nav-link " aria-current="page" href="#">Services</a></li>
+                  <li><a class="nav-link " aria-current="page" href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="fifthcard">
+                <h6 class="h6-style ">Services</h6>
+                <p class="fs-6">Personalized nutrition plans
+                  Health and wellness coaching
+                  Expand your spiritual knowledge</p>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="fifthcard  px-4">
+                <h6 class="h6-style px-5">Address</h6>
+                <p class="fs-7 py-3">4517 Washington Ave. Manchester, Kentucky 39495
+                  <br><br>
+                  <strong class="text-green">Call Us:</strong> (201) 555-0124
+                </p>
+                <div class="mb-2 mb-lg-0 d-flex gap-4 ">
+                  <i class="bi bi-facebook "></i>
+                  <i class="bi bi-twitter"></i>
+                  <i class="bi bi-instagram"></i>
+                  <i class="bi bi-youtube"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer section-->
+
+  <footer class="footer padding-section">
+    <div class="footerdiv">
+      <p>Copyright © 2025 Lumora</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="bootstrap2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lemonadejs/dist/lemonade.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@calendarjs/ce/dist/index.min.js"></script>
+  <script>
+    const { Calendar } = calendarjs;
+    Calendar(document.getElementById('root'), {
+      type: 'inline',
+      value: new Date()
+    });
+  </script>
+</body>
+
 </html>
-
