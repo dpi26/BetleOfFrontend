@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color:#343F1E; ;
+}
+*::selection{
+  background-color:#70A309;
+  color:#fff;
+}
+.padding-section{
+  padding: 9rem;
+}
+.font-1{
+  font-family: "Marcellus",serif;
+
+}
+.btn-1{
+  font-size: larger;
+border:2px solid  #70A309;
+background-color:aliceblue;
+color:#70A309;
+padding: .9rem 2.3rem;
+border-radius:30px;
+}
+.btn-1:hover{
+  color: rgb(234, 238, 230);
+  background-color: #70A309;
+
+}
+  .h1-style{
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.h6-style{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.h2-style{
+  font-size: 3.5rem;
+}
+nav div a img{
+height: 35px;
+}
+
+.hero-img{
+  background-image: url(./assests/image/Hero-BG-scaled-1.jpg);
+  background-position:center;
+  background-size: cover;
+}
+.hero-inner{
+  padding-bottom: 150px;
+  padding-top: 150px;
+}
+.hero-inner h1 {
+  font-size: 4rem;
+ 
+}
+.hero-inner h6 {
+  font: 1.1rem;
+   font-weight: 600px;
+  text-transform: uppercase;
+}
+.btn-2{
+  border:none;
+  border-radius: 30px;
+  color: white;
+  background-color: #70A309;
+  padding: .9rem 2.3rem;
+
+}
+.btn-2:hover{
+  background-color:#84c10c;
+  color: white;
+}
+.second-sectio{
+  background-color: rgb(222, 225, 228);
+}
+.second-sec-left{
+  background-color: rgb(253, 253, 253);
+  font-size: larger;
+  font-weight: 500;
+  margin:3rem 2rem;
+  border-radius: 10px;
+}
+.second-sec-right{
+  margin: 2rem 3rem;
+  color:#343F1E;
+}
+.third-section{
+  background-color:white ;
+  color:#343F1E;
+}
+.grid-box{
+  column-gap:3rem;
+  row-gap: 3rem;
+}
+.card-img{
+background-position:center;
+background-size: cover;
+}
+.card-word{
+  font-size: .9rem;
+  font-weight:bold;
+}
+.h3-style{
+  font-size: 3rem;
+   color: #343F1E;
+  font-weight: 600;
+}
+.p-sty{
+  font-size: 1.2rem;
+   color: #343F1E;
+  font-weight: 400;
+}
+.forth-section{
+  background-color: white;
+  color: #343F1E;
+}
+.fifth-section{
+  background-color:#E3E9D8;
+  color:#455327;
+}
+.btn3{
+  padding-left: 20px;
+  color:#455327;
+
+}
+i{
+  color: #70A309;
+}
+i:hover{
+  color:#455327;
+}
+.footer{
+  font-size:1rem;
+  background-color:#E3E9D8;
+  color: #343F1E;
+}
+.footerdiv{
+  padding: 30px;
+}
